@@ -18,6 +18,8 @@
   <link rel="shortcut icon" href="ico/favico.png">
   <link rel="shortcut icon" href="ico/favico.ico">
 
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
 
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -41,7 +43,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand scroll" href="#home">
-            <img src="/assets/dummy/wastetrackinglogo.png" alt="Waste Tracking">
+            <%= image_tag "dummy/wastetrackinglogo.png" %>
           </a>
         </div><!--/navbar-header-->
 
@@ -84,7 +86,7 @@
       <div class="row">
         <div class="col-sm-5">
           <div class="img-showcase wow fadeInUp" data-wow-delay="0.5s">
-            <img class="lazy" data-original="/assets/dummy/img12.png" alt="Stilearn Admin Showcase">
+            <%= image_tag "dummy/img12.png", :class=>"lazy" %>
           </div>
         </div><!--/-cols-->
 
@@ -240,12 +242,13 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="text-footer wow fadeInDown"><img class="lazy" height="40px" data-original="/assets/dummy/wastetrackinglogo.png" alt="Waste Tracking"> </p>
+      <p class="text-footer wow fadeInDown">
+        <%= image_tag "dummy/wastetrackinglogo.png", :height=>"40px", :class=>"lazy" %> </p>
     </div><!--/-container-->
   </footer><!--/footer-->
 </div><!--/frontend-page-->
 
 
-
+<!-- endbuild -->
 </body>
 </html>
