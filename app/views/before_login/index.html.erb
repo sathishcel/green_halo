@@ -54,7 +54,11 @@
             <li><a class="scroll" href="#about">About</a></li>
             <li><a class="scroll" href="#tools">Tools</a></li>
             <li><a class="scroll" href="#features">Features</a></li>
-            <li><a href="page-signin.php"><strong>Signin</strong></a></li>
+            <li>
+              <%= link_to new_user_session_path do %>
+                  <strong>Signin</strong>
+              <% end %>
+            </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!--/container-->
@@ -68,7 +72,7 @@
               <span class="text-lg text-uppercase">Your Complete Waste Tracking Solution</span>
             </h1>
 
-            <p class="lead text-uppercase animated fadeInUp animated-delay-2"><span class="text-lg">Completely redesigned with tons of awesome new features</span></p>
+              <p class="lead text-uppercase animated fadeInUp animated-delay-2"><span class="text-lg">Completely redesigned with tons of awesome new features</span></p>
 
             <p class="animated flipInX animated-delay-3">
               <a target="_blank" href="/logins/business" class="btn btn-lg btn-rounded btn-transparent margin-bottom">BUSINESS USERS</a>

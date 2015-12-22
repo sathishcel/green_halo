@@ -1,6 +1,23 @@
 Rails.application.routes.draw do
 
-  root 'before_login#index', as: :unauthenticated_root
+
+
+  devise_for :users,:controllers => { registrations: 'users/registrations',
+                                        confirmations: 'users/confirmations', passwords: 'users/passwords' , sessions: 'users/sessions'}
+  authenticated do
+    get 'overview/dashboard' => 'overview/dashboard', as: :authenticated_root
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
+
+  unauthenticated do
+    devise_scope :user do
+      root to: "before_login#index",  as: :unauthenticated_root
+    end
+    post '/sessions/check_login'  => '/sessions/check_login'
+  end
+
+
 
   resource 'logins' do
     get 'business'
@@ -61,4 +78,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root 'devise/sessions#new'
 end

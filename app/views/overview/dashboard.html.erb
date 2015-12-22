@@ -1,0 +1,326 @@
+<div id="error-placement"></div>
+<div class="row margin-top">
+  <div class="col-md-12 margin-bottom">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#system-stats" data-toggle="tab">System Stats</a></li>
+    </ul>
+  </div>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="system-stats" class="tab-pane fade active in">
+      <div class="col-md-4">
+        <div id="overall-visitor" class="panel panel-animated panel-primary bg-primary">
+          <div class="panel-body">
+            <div class="panel-actions-fly">
+              <button data-refresh="#overall-visitor" data-error-place="#error-placement" title="refresh" class="btn-panel">
+                <i class="glyphicon glyphicon-refresh"></i>
+              </button><!--/btn-panel-->
+              <a href="#" title="Go to system stats page" class="btn-panel">
+                <i class="glyphicon glyphicon-stats"></i>
+              </a><!--/btn-panel-->
+            </div><!--/panel-action-fly-->
+
+            <p class="lead">Liquid Waste</p><!--/lead as title-->
+
+            <ul class="list-percentages row">
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Total</p>
+                <p class="text-lg"><strong><%= @liquid_total_tons %></strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Recycled/Reused</p>
+                <p class="text-lg"><strong><%= @used_liquid_tons %></strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Disposed</p>
+                <p class="text-lg"><strong><%= @liquid_disposed_tons %></strong></p>
+              </li>
+            </ul><!--/list-percentages-->
+            <p class="helper-block">
+            <div class="progress progress-xs progress-flat progress-inverse-inverse">
+              <div class="progress-bar progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                <span class="sr-only">60% Complete (inverse)</span>
+              </div>
+            </div>
+            </p><p class="text-ellipsis"><i class="fa fa-caret-up"></i> 0 &nbsp;&nbsp; +0<sup>%</sup> <small>Looks Good!, up from last month</small></p>
+            <!--/help-block-->
+          </div><!--/panel-body-->
+        </div><!--/panel overal-visitor-->
+      </div><!--/cols-->
+
+      <div class="col-md-4">
+        <div id="overall-users" class="panel panel-animated panel-success bg-success">
+          <div class="panel-body">
+            <div class="panel-actions-fly">
+              <button data-refresh="#overall-users" data-error-place="#error-placement" title="refresh" class="btn-panel">
+                <i class="glyphicon glyphicon-refresh"></i>
+              </button><!--/btn-panel-->
+              <a href="#" title="Go to system stats page" class="btn-panel">
+                <i class="glyphicon glyphicon-stats"></i>
+              </a><!--/btn-panel-->
+            </div><!--/panel-action-fly-->
+
+            <p class="lead">Solid Waste</p><!--/lead as title-->
+
+            <ul class="list-percentages row">
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Total</p>
+                <p class="text-lg"><strong><%= @solid_total_tons %></strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Recycled/Reused</p>
+                <p class="text-lg"><strong><%= @used_solid_tons %></strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Disposed</p>
+                <p class="text-lg"><strong><%= @solid_disposed_tons %></strong></p>
+              </li>
+            </ul><!--/list-percentages-->
+            <p class="helper-block">
+            <div class="progress progress-xs progress-flat progress-inverse-inverse">
+              <div class="progress-bar progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                <span class="sr-only">60% Complete (inverse)</span>
+              </div>
+            </div>
+            </p><p class="text-ellipsis"><i class="fa fa-caret-up"></i> 0 &nbsp;&nbsp; +0<sup>%</sup> <small>Looks Good!, up from last month</small></p>
+            <!--/help-block-->
+          </div><!--/panel-body-->
+        </div><!--/panel overal-users-->
+      </div><!--/cols-->
+
+      <div class="col-md-4">
+        <div id="overall-orders" class="panel panel-animated panel-danger bg-danger">
+          <div class="panel-body">
+            <div class="panel-actions-fly">
+              <button data-refresh="#overall-orders" data-error-place="#error-placement" title="refresh" class="btn-panel">
+                <i class="glyphicon glyphicon-refresh"></i>
+              </button><!--/btn-panel-->
+              <a href="#" title="Go to system stats page" class="btn-panel">
+                <i class="glyphicon glyphicon-stats"></i>
+              </a><!--/btn-panel-->
+            </div><!--/panel-action-fly-->
+
+            <p class="lead">Expenses</p><!--/lead as title-->
+
+            <ul class="list-percentages row">
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Net Costs</p>
+                <p class="text-lg"><strong>0</strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Disposal Fees</p>
+                <p class="text-lg"><strong>0</strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Recycling Revenue</p>
+                <p class="text-lg"><strong>0</strong></p>
+              </li>
+            </ul><!--/list-percentages-->
+            <p class="helper-block">
+            <div class="progress progress-xs progress-flat progress-inverse-inverse">
+              <div class="progress-bar progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                <span class="sr-only">60% Complete (inverse)</span>
+              </div>
+            </div>
+            </p><p class="text-ellipsis"><i class="fa fa-caret-down"></i> 0 &nbsp;&nbsp; -0<sup>%</sup> <small>Looks not good! try increasing your product</small></p>
+            <!--/help-block-->
+          </div><!--/panel-body-->
+        </div><!--/panel overal-orders-->
+      </div><!--/cols-->
+    </div><!--/#system-stats-->
+
+
+    <div id="server-stats" class="tab-pane fade">
+      <div class="col-md-4">
+        <div id="overall-bandwidth" class="panel panel-animated panel-primary bg-primary">
+          <div class="panel-body">
+            <div class="panel-actions-fly">
+              <button data-refresh="#overall-bandwidth" data-error-place="#error-placement" title="refresh" class="btn-panel">
+                <i class="glyphicon glyphicon-refresh"></i>
+              </button><!--/btn-panel-->
+              <a href="#" title="Go to server stats page" class="btn-panel">
+                <i class="glyphicon glyphicon-stats"></i>
+              </a><!--/btn-panel-->
+            </div><!--/panel-action-fly-->
+
+            <p class="lead">Bandwidth</p><!--/lead as title-->
+
+            <p>
+            <div class="easyPieChart" data-barcolor="#232332" data-trackcolor="#ecf0f1" data-scalecolor="#ecf0f1" data-percent="16" data-size="120">
+              <span>16%</span>
+            </div>
+            </p><p class="text-ellipsis text-center">Bandwidth Usage 120,4 GB / 2 TB</p>
+
+          </div><!--/panel-body-->
+        </div><!--/panel overal-bandwidth-->
+      </div><!--/cols-->
+
+      <div class="col-md-4">
+        <div id="overall-diskspace" class="panel panel-animated panel-success bg-success">
+          <div class="panel-body">
+            <div class="panel-actions-fly">
+              <button data-refresh="#overall-diskspace" data-error-place="#error-placement" title="refresh" class="btn-panel">
+                <i class="glyphicon glyphicon-refresh"></i>
+              </button><!--/btn-panel-->
+              <a href="#" title="Go to server stats page" class="btn-panel">
+                <i class="glyphicon glyphicon-stats"></i>
+              </a><!--/btn-panel-->
+            </div><!--/panel-action-fly-->
+
+            <p class="lead">Disk Space</p><!--/lead as title-->
+
+            <p>
+            <div class="easyPieChart" data-barcolor="#232332" data-trackcolor="#ecf0f1" data-scalecolor="#ecf0f1" data-percent="37" data-size="120">
+              <span>64%</span>
+            </div>
+            </p><p class="text-ellipsis text-center">File Usage 128,137 / 200,000</p>
+
+          </div><!--/panel-body-->
+        </div><!--/panel overal-diskspace-->
+      </div><!--/cols-->
+
+      <div class="col-md-4">
+        <div id="overall-phisicmem" class="panel panel-animated panel-danger bg-danger">
+          <div class="panel-body">
+            <div class="panel-actions-fly">
+              <button data-refresh="#overall-phisicmem" data-error-place="#error-placement" title="refresh" class="btn-panel">
+                <i class="glyphicon glyphicon-refresh"></i>
+              </button><!--/btn-panel-->
+              <a href="#" title="Go to server stats page" class="btn-panel">
+                <i class="glyphicon glyphicon-stats"></i>
+              </a><!--/btn-panel-->
+            </div><!--/panel-action-fly-->
+
+            <p class="lead">Physical Memory</p><!--/lead as title-->
+
+            <p>
+            <div class="easyPieChart" data-barcolor="#232332" data-trackcolor="#ecf0f1" data-scalecolor="#ecf0f1" data-percent="45" data-size="120">
+              <span>45%</span>
+            </div>
+            </p><p class="text-ellipsis text-center">Physical Memory Usage 457 MB / 1 GB</p>
+
+          </div><!--/panel-body-->
+        </div><!--/panel overal-phisicmem-->
+      </div><!--/cols-->
+    </div><!--/#system-stats-->
+  </div><!--/tab-content-->
+</div><!--/row-->
+
+
+
+
+
+<div class="row">
+  <div class="col-sm-8">
+    <!-- VMAP -->
+    <div class="panel panel-animated panel-default">
+      <div class="panel-heading bg-white">
+        <div class="panel-actions">
+          <div class="btn-group">
+            <button class="btn-panel dropdown-toggle" data-toggle="dropdown">
+              Change Maps
+              <i class="fa fa-angle-down"></i>
+            </button>
+            <ul id="changeMapRegion" class="dropdown-menu pull-right">
+              <li class="active"><a href="#" data-map="world_en">World</a></li>
+              <li class="divider"></li>
+              <li><a href="#" data-map="africa_en">Africa</a></li>
+              <li><a href="#" data-map="asia_en">Asia</a></li>
+              <li><a href="#" data-map="australia_en">Australia</a></li>
+              <li><a href="#" data-map="europe_en">Europe</a></li>
+              <li><a href="#" data-map="north-america_en">North America</a></li>
+              <li><a href="#" data-map="south-america_en">South America</a></li>
+              <li class="divider"></li>
+              <li><a href="#" data-map="dz_fr">Algeria</a></li>
+              <li><a href="#" data-map="france_fr">France</a></li>
+              <li><a href="#" data-map="germany_en">Germany</a></li>
+              <li><a href="#" data-map="russia_en">Russia</a></li>
+              <li><a href="#" data-map="usa_en">USA</a></li>
+            </ul>
+          </div><!--/btn-group-->
+        </div><!-- /panel-actions -->
+        <h4 class="panel-title" data-ariginal-title="World Map" id="mapRegion">World Map</h4>
+      </div><!--/panel-heading-->
+
+      <div class="panel-body">
+        <div id="vmap" class="vmap" style="height:370px"></div>
+      </div><!--/panel-body-->
+
+      <ul class="list-group">
+        <li class="list-group-item" id="legend-region">Summary of World</li>
+        <li class="list-group-item"><div id="legend-visit" class="badge badge-primary"></div><i class="fa fa-signal"></i> Units Tracking</li>
+        <li class="list-group-item"><div id="legend-member" class="badge badge-primary"><%= @users_count %></div><i class="fa fa-users"></i> Users</li>
+        <li class="list-group-item"><div id="legend-customer" class="badge badge-primary"></div><i class="fa fa-briefcase"></i> Vendors</li>
+        <li class="list-group-item"><div id="legend-online" class="badge badge-primary"></div><i class="fa fa-circle"></i> Material Types</li>
+        <li class="list-group-item"><div id="legend-revenue" class="badge badge-primary"></div><i class="fa fa-dollar"></i> Recycling Revenue</li>
+      </ul><!--/list-group map-legend-->
+    </div><!--/panel-->
+  </div><!--/cols-->
+
+
+  <div class="col-sm-4">
+    <div class="panel panel-animated panel-inverse bg-inverse">
+      <div class="panel-body">
+        <p class="text-lg"><span class="pull-right"><%= @wgu_count %><sup></sup></span><i class="fa fa-cloud-download"></i> Units Reporting</p>
+        <div class="progress progress-lg">
+          <div class="progress-bar progress-bar-inverse" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="width: 64%">
+            <span class="sr-only">64% Complete (inverse)</span>
+          </div>
+        </div>
+
+        <p class="text-lg"><span class="pull-right">0<sup></sup></span><i class="fa fa-cloud-upload"></i> Units Not Reporting</p>
+        <div class="progress progress-lg">
+          <div class="progress-bar progress-bar-inverse" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100" style="width: 37%">
+            <span class="sr-only">37% Complete (inverse)</span>
+          </div>
+        </div>
+      </div><!--/panel-body-->
+    </div><!--/panel-->
+
+
+    <div id="dashboard-weather" class="panel panel-animated panel-default bg-danger border-danger border-danger">
+      <div class="panel-heading bg-transparent no-border">
+        <h3 class="text-center">Whashington (WA)</h3>
+      </div><!--/panel-heading-->
+
+      <div class="panel-body text-center bordered-bottom border-transparent">
+        <p class="text-lg">SAT 08/02</p>
+        <p class="text-64">23&deg; <canvas id="skycons-wind1" width="64" height="64"></canvas></p>
+      </div><!--/panel-body-->
+
+      <div class="list-group bg-danger">
+        <a class="list-group-item" href="#">
+          <canvas class="pull-right" id="skycons-sun" width="16" height="16"></canvas>
+          <div class="list-group-item-text pull-right">29&deg;</div>
+          SUN 02/02
+        </a>
+        <a class="list-group-item" href="#">
+          <canvas class="pull-right" id="skycons-snow" width="16" height="16"></canvas>
+          <div class="list-group-item-text pull-right">15&deg;</div>
+          MON 03/02
+        </a>
+        <a class="list-group-item" href="#">
+          <canvas class="pull-right" id="skycons-cloudy" width="16" height="16"></canvas>
+          <div class="list-group-item-text pull-right">26&deg;</div>
+          TUE 04/02
+        </a>
+        <a class="list-group-item" href="#">
+          <canvas class="pull-right" id="skycons-wind2" width="16" height="16"></canvas>
+          <div class="list-group-item-text pull-right">24&deg;</div>
+          WED 05/02
+        </a>
+        <a class="list-group-item" href="#">
+          <canvas class="pull-right" id="skycons-rain" width="16" height="16"></canvas>
+          <div class="list-group-item-text pull-right">22&deg;</div>
+          THU 06/02
+        </a>
+        <a class="list-group-item" href="#">
+          <canvas class="pull-right" id="skycons-fog" width="16" height="16"></canvas>
+          <div class="list-group-item-text pull-right">25&deg;</div>
+          FRI 07/02
+        </a>
+      </div><!--/list-group-->
+    </div><!--panel-->
+  </div><!--/cols-->
+</div><!--/row-->

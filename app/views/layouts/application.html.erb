@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>| Wastetracking | wastetracking.com</title>
+  <title>Waste Diversion and Recycling Tracking System - Green Halo - The Leader in Waste Tracking Solution</title>
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= favicon_link_tag 'img/wastetrac-meta-icon.png' %>
   <%= csrf_meta_tags %>
+
+
+
 </head>
+
+<%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+
+
 <body>
 
+<%#= render partial: 'shared/common_header' %>
+<% unless flash[:notice].blank? %>
+
+    <div class="alert-meg" align="center">
+      <%= flash[:notice] %>
+
+    </div>
+
+<% end %>
+
 <%= yield %>
+
+<%#= render partial: 'shared/footer_new' %>
 
 </body>
 </html>
